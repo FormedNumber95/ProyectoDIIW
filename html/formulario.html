@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Contactanos</title>
 </head>
+
 <body>
     <header>
         <h1>Blood Bowl</h1>
@@ -29,29 +31,39 @@
             <form action="#">
                 <table>
                     <tr>
-                        <td>Nombre:</td>
+                        <td><label for="nombre">Nombre:</label></td>
                         <td><input type="text" name="nombre" id="nombre" required class="ocupaTodo"></td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
+                        <td><label for="email">Email:</label></td>
                         <td><input type="email" name="email" id="email" required class="ocupaTodo"></td>
                     </tr>
                     <tr>
                         <td>Asunto:</td>
-                        <td><table>
-                            <tr>
-                                <td><input type="radio" name="radio" id="aniadirRaza" value="aniadirRaza" checked>Añadir nueva raza</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="radio" id="errorDetectado" value="errorDetectado">Se ha encontrado un error</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="radio" id="otro" value="otro">Otro</td>
-                            </tr>
-                        </table></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="radio" id="aniadirRaza" value="aniadirRaza"
+                                            checked><label for="aniadirRaza">Añadir nueva raza</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="radio" id="errorDetectado"
+                                            value="errorDetectado"><label for="errorDetectado">Se ha encontrado un
+                                            error</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="radio" id="otro" value="otro"><label
+                                            for="otro">Otro</label></td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="2"><textarea name="txtArea" id="txtArea" placeholder="Mensaje" required class="ocupaTodo"></textarea></td>
+                        <td colspan="2">
+                            <p><label for="txtArea">Mensaje:</label></p>
+                            <textarea name="txtArea" id="txtArea" placeholder="Mensaje" required
+                                class="ocupaTodo"></textarea>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="submit" value="ENVIAR" name="enviar" class="ocupaTodo"></td>
@@ -65,4 +77,5 @@
         <p>Aketza González Rey - 2025</p>
     </footer>
 </body>
+
 </html>
