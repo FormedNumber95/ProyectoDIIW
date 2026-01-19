@@ -349,13 +349,13 @@ footer>p {
 }
 
 #aceptar-btn {
-  background-color: var(--apoyo);
-  color: var(--secundario);
+  background-color: var(--tarjeta);
+  color: var(--principal);
 }
 
 #rechazar-btn {
-  background-color: var(--tercero);
-  color: var(--secundario);
+  background-color: var(--tarjeta);
+  color: var(--principal);
 }
 
 /******************************/
