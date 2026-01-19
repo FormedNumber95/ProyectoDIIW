@@ -35,100 +35,123 @@ LISTA DE CONTENIDOS
   --fondo-footer: brown;
   --box-shadow: rgba(0, 0, 0, 0.2);
 }
+
 /******************************/
 /*    02.General    */
 /******************************/
 /* necesario para evitar solapamientos con el header y el footer */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
-body{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:"header"
-                        "main"
-                        "footer";
-    background-color: var(--fondo-principal);
-    height: 100vh;
-    overflow: hidden; /* Evita scroll en body */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header"
+    "main"
+    "footer";
+  background-color: var(--fondo-principal);
+  height: 100vh;
+  overflow: hidden;
+  /* Evita scroll en body */
+  font-family: 'OpenDyslexic', Arial, sans-serif;
 }
-header{
-    background-color: var(--fondo-header);
-    padding: 0.5em;
-    grid-area: header;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6em;
-    z-index: 10;
-    padding: 0 1rem;
+
+header {
+  background-color: var(--fondo-header);
+  padding: 0.5em;
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6em;
+  z-index: 10;
+  padding: 0 1rem;
 }
-h1{
-    text-align: center;
-    color: var(--secundario);
+
+h1 {
+  text-align: center;
+  color: var(--secundario);
 }
-main{
-    margin-top: 1em;
-    grid-area: main;
-    margin-top: 6em;
-    margin-bottom: 3em;
-    overflow: auto;
-    padding: 1rem;
-    height: calc(100vh - 6em - 5em);
+
+main {
+  margin-top: 1em;
+  grid-area: main;
+  margin-top: 6em;
+  margin-bottom: 3em;
+  overflow: auto;
+  padding: 1rem;
+  height: calc(100vh - 6em - 5em);
 }
-section{
+
+section {
   overflow: auto;
 }
+
 a {
   color: var(--fondo-footer);
   text-decoration: none;
 }
+
 b {
   font-size: 1.2em;
 }
-select{
-    text-align: center;
-    width: 100%;
-    margin: auto;
+
+select {
+  text-align: center;
+  width: 100%;
+  margin: auto;
 }
-textarea{
+
+textarea {
   height: 10em;
 }
-button,input[type="submit"]{
+
+button,
+input[type="submit"] {
   border-radius: 7em;
 }
-.ocupaTodo{
+
+.ocupaTodo {
   width: 100%;
 }
-.contenedor{
-    padding: 1em;
-    background-color: var(--fondo);
-    border-radius: 2em;
+
+.contenedor {
+  padding: 1em;
+  background-color: var(--fondo);
+  border-radius: 2em;
 }
+
 /******************************/
 /*    03.Tablas    */
 /******************************/
 table {
-    width: 90%;
-    margin: auto;
-    border: thin solid #cccccc;
-    background: #ffffff;
-    border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  border: thin solid #cccccc;
+  background: #ffffff;
+  border-collapse: collapse;
 }
-td,th {
-    border: thin solid #cccccc;
-    padding: 1em;
-}
+
+td,
 th {
-    text-transform: uppercase;
-    text-align: center;
+  border: thin solid #cccccc;
+  padding: 1em;
 }
-.equipo>tr:hover{
-    background-color: var(--apoyo);
-    color: var(--secundario);
+
+th {
+  text-transform: uppercase;
+  text-align: center;
 }
+
+.equipo>tr:hover {
+  background-color: var(--apoyo);
+  color: var(--secundario);
+}
+
 /******************************/
 /*    04.Barra de Navegacion    */
 /******************************/
@@ -206,7 +229,7 @@ th {
 }
 
 .menu--item:hover a {
-    color: var(--tercero);
+  color: var(--tercero);
 }
 
 .menu:hover .menu--item {
@@ -217,65 +240,79 @@ th {
 /******************************/
 /*  05.Superior a tarjetas  */
 /******************************/
-.superior{
+.superior {
   grid-area: gastado;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .animacionError {
   opacity: 0;
   font-size: 2em;
-  animation: animacionError 5s ease-in-out infinite; /* 10s = 5s visible + 5s invisible */
+  animation: animacionError 5s ease-in-out infinite;
+  /* 10s = 5s visible + 5s invisible */
 }
 
 @keyframes animacionError {
-  0%   { opacity: 0; }
-  50%  { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
+
 /******************************/
 /*    06.Tarjetas    */
 /******************************/
-.contenedorTarjetas{
+.contenedorTarjetas {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:"gastado";
+  grid-template-areas: "gastado";
 }
-.tarjeta{
+
+.tarjeta {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:"tipo cantidad cantidad"
-                      "estadisticas habilidades habilidades"
-                      "estadisticas habilidades habilidades"
-                      "estadisticas precio precio"
-                      "aniadir nada eliminar";
+  grid-template-areas: "tipo cantidad cantidad"
+    "estadisticas habilidades habilidades"
+    "estadisticas habilidades habilidades"
+    "estadisticas precio precio"
+    "aniadir nada eliminar";
   background-color: var(--tarjeta);
   margin: 1em;
   padding: 0.5em;
 }
+
 /******************************/
 /*    07.Footer    */
 /******************************/
-footer{
-    grid-area: footer;
-    display: grid;
-    gap: 3%;
-    grid-template-columns: 1fr;
-    grid-template-areas:"img";
-    align-items: center;
-    text-align: center;
-    background-color: var(--fondo-footer);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3em;
-    z-index: 10;
+footer {
+  grid-area: footer;
+  display: grid;
+  gap: 3%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "img";
+  align-items: center;
+  text-align: center;
+  background-color: var(--fondo-footer);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  z-index: 10;
 }
-footer>p{
-    color: var(--secundario);
-    grid-area: auto;
+
+footer>p {
+  color: var(--secundario);
+  grid-area: auto;
 }
 
 /******************************/
@@ -325,7 +362,7 @@ footer>p{
 /*    09.Media Tablets    */
 /******************************/
 @media (min-width: 750px) {
- body {
+  body {
     font-size: 1.1em;
   }
 
@@ -333,15 +370,15 @@ footer>p{
     font-size: 2em;
   }
 
-  .menu{
+  .menu {
     top: 1rem;
   }
 
   /* Tarjetas más amplias y con sombra */
-  .contenedorTarjetas{
+  .contenedorTarjetas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:"gastado gastado";
+    grid-template-areas: "gastado gastado";
   }
 
   .tarjeta {
@@ -355,15 +392,19 @@ footer>p{
     width: 80%;
   }
 
-  input, select, textarea, button {
+  input,
+  select,
+  textarea,
+  button {
     font-size: 1em;
   }
 }
+
 /******************************/
 /*    10.Media Escritorio    */
 /******************************/
 @media (min-width: 1000px) {
-body {
+  body {
     font-size: 1.15em;
   }
 
@@ -375,16 +416,16 @@ body {
     padding: 1rem;
   }
 
-  .menu{
+  .menu {
     top: 1.2rem;
   }
 
   /* Tarjetas en cuadrícula más espaciosa */
-  .contenedorTarjetas{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:"gastado gastado gastado";
-}
+  .contenedorTarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "gastado gastado gastado";
+  }
 
   .tarjeta {
     padding: 1.5em;
@@ -408,6 +449,7 @@ body {
     font-size: 1em;
   }
 }
+
 /******************************/
 /*    11.Media Print  */
 /******************************/
@@ -450,7 +492,9 @@ body {
     padding: 0;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     color: black !important;
     text-align: center;
   }
@@ -472,7 +516,8 @@ body {
     border: 1px solid #000;
   }
 
-  th, td {
+  th,
+  td {
     border: 1px solid #000;
     padding: 0.5em;
   }
@@ -491,7 +536,9 @@ body {
     display: block;
   }
 
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     border: 1px solid #000;
     color: black;
     background: white !important;
@@ -529,7 +576,11 @@ body {
   }
 
   /********** Evitar cortes bruscos **********/
-  table, tr, img, section, .tarjeta {
+  table,
+  tr,
+  img,
+  section,
+  .tarjeta {
     page-break-inside: avoid;
   }
 

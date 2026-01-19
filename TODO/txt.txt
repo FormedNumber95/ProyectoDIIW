@@ -1,4 +1,0 @@
--pasar a bootstrap todo lo que se pueda (se puede hacer ya)
--accesibilidad (se puede hacer ya)
--SEO (se puede hacer ya)
--publicar en github (se puede hacer ya)
