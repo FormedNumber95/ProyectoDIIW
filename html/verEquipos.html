@@ -9,33 +9,66 @@
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Ver Equipos</title>
 </head>
+
 <body>
-    <header>
+    <!-- HEADER -->
+    <header role="banner">
         <h1>Blood Bowl</h1>
-        <nav class="menu">
+
+        <!-- NAV -->
+        <nav class="menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
-                <a href="../index.html"><img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo"></a>
+                <a href="../index.html" aria-label="Ir a la página principal">
+                    <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
+                </a>
             </div>
-            <div class="menu--items">
-                <div class="menu--item"><a href="../index.html">Pagina principal</a></div>
-                <div class="menu--item"><a href="./crearEquipo.html">Crear equipo</a></div>
-                <div class="menu--item"><a href="./formulario.html">Contacta con nosotros</a></div>
+
+            <div class="menu--items" role="menubar">
+                <div class="menu--item" role="none">
+                    <a href="../index.html" role="menuitem">Pagina principal</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./crearEquipo.html" role="menuitem">Crear equipo</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./formulario.html" role="menuitem">Contacta con nosotros</a>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section id="contenedorTabla" class="contenedor">
-            <h2>Revisa la tabla de los equipos</h2>
-            <select name="equipos" id="equipos"></select>
-            <section id="informacionEquipo"></section>
-            <button id="btnCrearEquipo">Crea tu propio equipo</button>
+
+    <!-- MAIN -->
+    <main role="main">
+        <section id="contenedorTabla"
+                 class="contenedor"
+                 role="region"
+                 aria-labelledby="titulo-tabla">
+
+            <h2 id="titulo-tabla">Revisa la tabla de los equipos</h2>
+
+            <select name="equipos"
+                    id="equipos"
+                    aria-label="Selector de equipos disponibles">
+            </select>
+
+            <section id="informacionEquipo"
+                     role="region"
+                     aria-live="polite"
+                     aria-label="Información del equipo seleccionado">
+            </section>
+
+            <button id="btnCrearEquipo"
+                    aria-label="Crear un nuevo equipo personalizado">
+                Crea tu propio equipo
+            </button>
         </section>
-        
     </main>
-    <footer>
-        <!-- iconos de redes sociales -->
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
-   <script type="text/javascript" src="../js/verEquipos.js" ></script>
+
+   <script type="text/javascript" src="../js/verEquipos.js"></script>
 </body>
 </html>

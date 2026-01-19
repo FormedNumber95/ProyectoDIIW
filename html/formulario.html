@@ -12,68 +12,142 @@
 </head>
 
 <body>
-    <header>
+    <!-- HEADER -->
+    <header role="banner">
         <h1>Blood Bowl</h1>
-        <nav class="menu">
+
+        <!-- NAV -->
+        <nav class="menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
-                <a href="../index.html"><img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo"></a>
+                <a href="../index.html" aria-label="Ir a la página principal">
+                    <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
+                </a>
             </div>
-            <div class="menu--items">
-                <div class="menu--item"><a href="../index.html">Pagina principal</a></div>
-                <div class="menu--item"><a href="./verEquipos.html">Ver equipos</a></div>
-                <div class="menu--item"><a href="./crearEquipo.html">Crear equipo</a></div>
+
+            <div class="menu--items" role="menubar">
+                <div class="menu--item" role="none">
+                    <a href="../index.html" role="menuitem">Pagina principal</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./verEquipos.html" role="menuitem">Ver equipos</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./crearEquipo.html" role="menuitem">Crear equipo</a>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section class="contenedor">
-            <h2>Contactanos</h2>
-            <form action="#">
-                <table>
+
+    <!-- MAIN -->
+    <main role="main">
+        <section class="contenedor"
+                 role="region"
+                 aria-labelledby="titulo-contacto">
+
+            <h2 id="titulo-contacto">Contactanos</h2>
+
+            <form action="#"
+                  role="form"
+                  aria-describedby="titulo-contacto">
+
+                <table role="presentation">
                     <tr>
-                        <td><label for="nombre">Nombre:</label></td>
-                        <td><input type="text" name="nombre" id="nombre" required class="ocupaTodo"></td>
+                        <td>
+                            <label for="nombre">Nombre:</label>
+                        </td>
+                        <td>
+                            <input type="text"
+                                   name="nombre"
+                                   id="nombre"
+                                   required
+                                   class="ocupaTodo"
+                                   aria-required="true">
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><label for="email">Email:</label></td>
-                        <td><input type="email" name="email" id="email" required class="ocupaTodo"></td>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input type="email"
+                                   name="email"
+                                   id="email"
+                                   required
+                                   class="ocupaTodo"
+                                   aria-required="true">
+                        </td>
                     </tr>
+
                     <tr>
                         <td>Asunto:</td>
                         <td>
-                            <table>
+                            <table role="presentation">
                                 <tr>
-                                    <td><input type="radio" name="radio" id="aniadirRaza" value="aniadirRaza"
-                                            checked><label for="aniadirRaza">Añadir nueva raza</label></td>
+                                    <td>
+                                        <input type="radio"
+                                               name="radio"
+                                               id="aniadirRaza"
+                                               value="aniadirRaza"
+                                               checked
+                                               aria-checked="true">
+                                        <label for="aniadirRaza">Añadir nueva raza</label>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="radio" id="errorDetectado"
-                                            value="errorDetectado"><label for="errorDetectado">Se ha encontrado un
-                                            error</label></td>
+                                    <td>
+                                        <input type="radio"
+                                               name="radio"
+                                               id="errorDetectado"
+                                               value="errorDetectado">
+                                        <label for="errorDetectado">Se ha encontrado un
+                                            error</label>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="radio" id="otro" value="otro"><label
-                                            for="otro">Otro</label></td>
+                                    <td>
+                                        <input type="radio"
+                                               name="radio"
+                                               id="otro"
+                                               value="otro">
+                                        <label for="otro">Otro</label>
+                                    </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+
                     <tr>
                         <td colspan="2">
-                            <p><label for="txtArea">Mensaje:</label></p>
-                            <textarea name="txtArea" id="txtArea" placeholder="Mensaje" required
-                                class="ocupaTodo"></textarea>
+                            <p>
+                                <label for="txtArea">Mensaje:</label>
+                            </p>
+                            <textarea name="txtArea"
+                                      id="txtArea"
+                                      placeholder="Mensaje"
+                                      required
+                                      class="ocupaTodo"
+                                      aria-required="true"
+                                      aria-label="Mensaje del formulario de contacto"></textarea>
                         </td>
                     </tr>
+
                     <tr>
-                        <td colspan="2"><input type="submit" value="ENVIAR" name="enviar" class="ocupaTodo"></td>
+                        <td colspan="2">
+                            <input type="submit"
+                                   value="ENVIAR"
+                                   name="enviar"
+                                   class="ocupaTodo"
+                                   aria-label="Enviar formulario de contacto">
+                        </td>
                     </tr>
                 </table>
             </form>
         </section>
     </main>
-    <footer>
-        <!-- iconos de redes sociales -->
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
 </body>

@@ -9,40 +9,77 @@
     <link rel="icon" href="./img/logo.PNG" type="image/x-icon">
     <title>BB | Index</title>
 </head>
+
 <body>
-    <header>
+    <!-- HEADER -->
+    <header role="banner">
         <h1>Blood Bowl</h1>
-        <nav class="menu">
+
+        <!-- NAV -->
+        <nav class="menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
-                <a href="index.html"><img src="./img/logo.PNG" alt="Despliega Menu" class="menu--logo"></a>
+                <a href="index.html" aria-label="Ir a la página principal">
+                    <img src="./img/logo.PNG" alt="Despliega Menu" class="menu--logo">
+                </a>
             </div>
-            <div class="menu--items">
-                <div class="menu--item"><a href="./html/verEquipos.html">Ver equipos</a></div>
-                <div class="menu--item"><a href="./html/crearEquipo.html">Crear equipo</a></div>
-                <div class="menu--item"><a href="./html/formulario.html">Contacta con nosotros</a></div>
+
+            <div class="menu--items" role="menubar">
+                <div class="menu--item" role="none">
+                    <a href="./html/verEquipos.html" role="menuitem">Ver equipos</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./html/crearEquipo.html" role="menuitem">Crear equipo</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./html/formulario.html" role="menuitem">Contacta con nosotros</a>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <div id="aviso-cookies" class="aviso-cookies">
-            <p>Este sitio usa cookies para mejorar tu experiencia. ¿Aceptas el uso de cookies?</p>
-            <p><button id="aceptar-btn">Aceptar</button>
-            <button id="rechazar-btn">Rechazar</button></p>
+
+    <!-- MAIN -->
+    <main role="main">
+        <!-- AVISO COOKIES -->
+        <div id="aviso-cookies"
+             class="aviso-cookies"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="titulo-cookies"
+             aria-describedby="descripcion-cookies"
+             aria-live="assertive">
+
+            <p id="descripcion-cookies">
+                Este sitio usa cookies para mejorar tu experiencia. ¿Aceptas el uso de cookies?
+            </p>
+
+            <p>
+                <button id="aceptar-btn" aria-label="Aceptar el uso de cookies">Aceptar</button>
+                <button id="rechazar-btn" aria-label="Rechazar el uso de cookies">Rechazar</button>
+            </p>
         </div>
-        <section id="descripcionBB" class="contenedor">
-            <h2>Que es <b>Blood Bowl</b></h2>
+
+        <!-- SECCIÓN DESCRIPCIÓN BLOOD BOWL -->
+        <section id="descripcionBB"
+                 class="contenedor"
+                 role="region"
+                 aria-labelledby="titulo-bb">
+
+            <h2 id="titulo-bb">Que es <b>Blood Bowl</b></h2>
+
             <p><b>Blood Bowl</b> es un juego de mesa de fantasía creado por Games Workshop que combina el fútbol 
                 americano con el universo de Warhammer Fantasy. En él, equipos de diversas razas, como humanos, 
                 enanos, orcos, elfos y no-muertos, compiten en un deporte brutal y violento, donde no solo importa 
                 el marcar goles, sino también la capacidad para aplastar, derribar y, a veces, asesinar a los 
                 jugadores rivales. El juego se desarrolla sobre un tablero cuadriculado, y los jugadores se 
                 mueven por turnos, tratando de avanzar con el balón mientras defienden su zona y atacan a sus oponentes.</p>
+
             <p>Cada equipo tiene características únicas, lo que significa que cada raza juega de manera distinta. 
                 Por ejemplo, los orcos son más fuertes y resistentes, mientras que los elfos son más ágiles y rápidos. 
                 Los jugadores controlan a los personajes de sus equipos, tomando decisiones estratégicas sobre cómo 
                 moverse, pasar el balón, hacer bloqueos o emplear habilidades especiales. Sin embargo, <b>Blood Bowl</b> no 
                 es solo un juego de habilidades, sino también de suerte, ya que los dados juegan un papel fundamental 
                 en el resultado de las jugadas, lo que aporta una capa de imprevisibilidad y emoción</p>
+
             <p>A lo largo de las ligas, los jugadores pueden desarrollar a sus personajes, mejorándolos 
                 con habilidades adicionales. Esto convierte al juego en una experiencia 
                 que evoluciona, ya que los equipos pueden crecer y adaptarse según las victorias y derrotas que 
@@ -50,21 +87,32 @@
                 jugadores, sino también una rica historia de rivalidades, traiciones y victorias épicas dentro 
                 de un mundo lleno de humor negro y absurdos propios de la fantasía.</p>
         </section>
+
         <br>
-        <section id="descripcionApp" class="contenedor">
-            <h2>Normativa y herramientas disponibles</h2>
+
+        <!-- SECCIÓN APLICACIÓN -->
+        <section id="descripcionApp"
+                 class="contenedor"
+                 role="region"
+                 aria-labelledby="titulo-app">
+
+            <h2 id="titulo-app">Normativa y herramientas disponibles</h2>
+
             <p>Actualmente, esta plataforma utiliza la <strong>normativa oficial de 2020</strong>. 
             Informamos de que la <strong>nueva normativa será publicada el próximo 15 de noviembre</strong>, 
             incorporando actualizaciones y mejoras en las reglas del juego.</p>
-            <p>Mientras tanto, puedes <a href="./html/verEquipos.html">consultar los equipos disponibles</a> 
-            o <a href="./html/crearEquipo.html">crear tu propio equipo personalizado</a> utilizando nuestras 
+
+            <p>Mientras tanto, puedes <a href="./html/verEquipos.html" aria-label="Consultar equipos disponibles">consultar los equipos disponibles</a> 
+            o <a href="./html/crearEquipo.html" aria-label="Crear un equipo personalizado">crear tu propio equipo personalizado</a> utilizando nuestras 
             herramientas interactivas. ¡Explora las posibilidades y prepara tu alineación para la próxima temporada!</p>
         </section>
     </main>
-    <footer>
-        <!-- iconos de redes sociales -->
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
+
     <script type="text/javascript" src="./js/cookie.js"></script>
 </body>
 </html>

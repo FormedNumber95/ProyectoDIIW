@@ -9,35 +9,72 @@
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Crear Equipos</title>
 </head>
+
 <body>
-    <header>
+    <!-- HEADER -->
+    <header role="banner">
         <h1>Blood Bowl</h1>
-        <nav class="menu">
+
+        <!-- NAV -->
+        <nav class="menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
-                <a href="../index.html"><img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo"></a>
+                <a href="../index.html" aria-label="Ir a la página principal">
+                    <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
+                </a>
             </div>
-            <div class="menu--items">
-                <div class="menu--item"><a href="../index.html">Pagina principal</a></div>
-                <div class="menu--item"><a href="./verEquipos.html">Ver equipos</a></div>
-                <div class="menu--item"><a href="./formulario.html">Contacta con nosotros</a></div>
+
+            <div class="menu--items" role="menubar">
+                <div class="menu--item" role="none">
+                    <a href="../index.html" role="menuitem">Pagina principal</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./verEquipos.html" role="menuitem">Ver equipos</a>
+                </div>
+                <div class="menu--item" role="none">
+                    <a href="./formulario.html" role="menuitem">Contacta con nosotros</a>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section class="contenedor">
-            <h2>Crea tu equipo</h2>
-            <select name="equipos" id="equipos"></select>
-            <form method="post">
-                <section id="informacionEquipo" class="contenedorTarjetas"></section>
-                <input type="submit" value="Validar" name="validar" id="btnValidar" class="ocupaTodo">
+
+    <!-- MAIN -->
+    <main role="main">
+        <section class="contenedor"
+                 role="region"
+                 aria-labelledby="titulo-crear-equipo">
+
+            <h2 id="titulo-crear-equipo">Crea tu equipo</h2>
+
+            <select name="equipos"
+                    id="equipos"
+                    aria-label="Selector de equipos disponibles">
+            </select>
+
+            <form method="post"
+                  role="form"
+                  aria-describedby="titulo-crear-equipo">
+
+                <section id="informacionEquipo"
+                         class="contenedorTarjetas"
+                         role="region"
+                         aria-label="Información del equipo seleccionado">
+                </section>
+
+                <input type="submit"
+                       value="Validar"
+                       name="validar"
+                       id="btnValidar"
+                       class="ocupaTodo"
+                       aria-label="Validar equipo creado">
             </form>
         </section>
-        
     </main>
-    <footer>
-        <!-- iconos de redes sociales -->
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script type="text/javascript" src="../js/crearEquipos.js"></script>
