@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aketza Gonzalez Rey">
+    <meta name="description" content="Pagina para contactar con nosotros">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <title>BB | Contactanos</title>
+</head>
+<body>
+    <header>
+        <h1>Blood Bowl</h1>
+        <nav class="menu">
+            <div class="menu--etiqueta">
+                <a href="../index.html"><img src="../img/logo.png" alt="Despliega Menu" class="menu--logo"></a>
+            </div>
+            <div class="menu--items">
+                <div class="menu--item"><a href="../index.html">Pagina principal</a></div>
+                <div class="menu--item"><a href="./verEquipos.html">Ver equipos</a></div>
+                <div class="menu--item"><a href="./crearEquipo.html">Crear equipo</a></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor">
+            <h2>Contactanos</h2>
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" name="nombre" id="nombre" required class="ocupaTodo"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" id="email" required class="ocupaTodo"></td>
+                    </tr>
+                    <tr>
+                        <td>Asunto:</td>
+                        <td><table>
+                            <tr>
+                                <td><input type="radio" name="radio" id="aniadirRaza" value="aniadirRaza" checked>Añadir nueva raza</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio" id="errorDetectado" value="errorDetectado">Se ha encontrado un error</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio" id="otro" value="otro">Otro</td>
+                            </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="txtArea" id="txtArea" placeholder="Mensaje" required class="ocupaTodo"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="ENVIAR" name="enviar" class="ocupaTodo"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- iconos de redes sociales -->
+        <p>Aketza González Rey - 2025</p>
+    </footer>
+</body>
+</html>

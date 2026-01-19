@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aketza Gonzalez Rey">
+    <meta name="description" content="Pagina para crear tu propio equipo y descargar el pdf del equipo creado">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <title>BB | Crear Equipos</title>
+</head>
+<body>
+    <header>
+        <h1>Blood Bowl</h1>
+        <nav class="menu">
+            <div class="menu--etiqueta">
+                <a href="../index.html"><img src="../img/logo.png" alt="Despliega Menu" class="menu--logo"></a>
+            </div>
+            <div class="menu--items">
+                <div class="menu--item"><a href="../index.html">Pagina principal</a></div>
+                <div class="menu--item"><a href="./verEquipos.html">Ver equipos</a></div>
+                <div class="menu--item"><a href="./formulario.html">Contacta con nosotros</a></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor">
+            <h2>Crea tu equipo</h2>
+            <select name="equipos" id="equipos"></select>
+            <form method="post">
+                <section id="informacionEquipo" class="contenedorTarjetas"></section>
+                <input type="submit" value="Validar" name="validar" id="btnValidar" class="ocupaTodo">
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <!-- iconos de redes sociales -->
+        <p>Aketza González Rey - 2025</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script type="text/javascript" src="../js/crearEquipos.js"></script>
+</body>
+</html>
