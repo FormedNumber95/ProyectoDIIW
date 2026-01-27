@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://formednumber95.github.io/ProyectoDIIW/sitemap.xml
