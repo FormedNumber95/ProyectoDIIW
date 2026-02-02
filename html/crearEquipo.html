@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aketza Gonzalez Rey">
-    <meta name="description" content="Pagina para crear tu propio equipo de blood bowl y descargar el pdf del equipo creado">
+    <meta name="description"
+        content="Pagina para crear tu propio equipo de blood bowl y descargar el pdf del equipo creado">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Crear Equipos</title>
@@ -16,7 +19,40 @@
         <h1>Blood Bowl</h1>
 
         <!-- NAV -->
-        <nav class="menu" role="navigation" aria-label="Menú principal">
+        <!-- MOVIL/TABLET -->
+        <nav class="navbar d-lg-none menu-movil" role="navigation" aria-label="Menú principal móvil">
+
+            <div class="container-fluid">
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler menu-movil__toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuMovil" aria-controls="menuMovil" aria-expanded="false"
+                    aria-label="Mostrar u ocultar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse menu-movil__panel" id="menuMovil">
+                    <ul class="navbar-nav mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" role="menuitem">Pagina principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./verEquipos.html" role="menuitem">Ver equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./formulario.html" role="menuitem">Contacta con nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./enlaces.html" role="menuitem">Enlaces a otras paginas</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- ORDENADOR -->
+        <nav class="d-none d-lg-block menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
                 <a href="../index.html" aria-label="Ir a la página principal">
                     <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
@@ -42,33 +78,21 @@
 
     <!-- MAIN -->
     <main role="main">
-        <section class="contenedor"
-                 role="region"
-                 aria-labelledby="titulo-crear-equipo">
+        <section class="contenedor" role="region" aria-labelledby="titulo-crear-equipo">
 
             <h2 id="titulo-crear-equipo">Crea tu equipo</h2>
 
-            <select name="equipos"
-                    id="equipos"
-                    aria-label="Selector de equipos disponibles">
+            <select name="equipos" id="equipos" aria-label="Selector de equipos disponibles">
             </select>
 
-            <form method="post"
-                  role="form"
-                  aria-describedby="titulo-crear-equipo">
+            <form method="post" role="form" aria-describedby="titulo-crear-equipo">
 
-                <section id="informacionEquipo"
-                         class="contenedorTarjetas"
-                         role="region"
-                         aria-label="Información del equipo seleccionado">
+                <section id="informacionEquipo" class="contenedorTarjetas" role="region"
+                    aria-label="Información del equipo seleccionado">
                 </section>
 
-                <input type="submit"
-                       value="Validar"
-                       name="validar"
-                       id="btnValidar"
-                       class="ocupaTodo"
-                       aria-label="Validar equipo creado">
+                <input type="submit" value="Validar" name="validar" id="btnValidar" class="ocupaTodo"
+                    aria-label="Validar equipo creado">
             </form>
         </section>
     </main>
@@ -81,5 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script type="text/javascript" src="../js/crearEquipos.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
 </body>
+
 </html>

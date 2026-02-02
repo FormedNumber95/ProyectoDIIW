@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aketza Gonzalez Rey">
     <meta name="description" content="Pagina para contactar con nosotros">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Enlaces</title>
@@ -17,7 +18,40 @@
         <h1>Blood Bowl</h1>
 
         <!-- NAV -->
-        <nav class="menu" role="navigation" aria-label="Menú principal">
+        <!-- MOVIL/TABLET -->
+        <nav class="navbar d-lg-none menu-movil" role="navigation" aria-label="Menú principal móvil">
+
+            <div class="container-fluid">
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler menu-movil__toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuMovil" aria-controls="menuMovil" aria-expanded="false"
+                    aria-label="Mostrar u ocultar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse menu-movil__panel" id="menuMovil">
+                    <ul class="navbar-nav mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" role="menuitem">Pagina principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./verEquipos.html" role="menuitem">Ver equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./crearEquipo.html" role="menuitem">Crear equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./formulario.html" role="menuitem">Contacta con nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- ORDENADOR -->
+        <nav class="d-none d-lg-block menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
                 <a href="../index.html" aria-label="Ir a la página principal">
                     <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
@@ -57,6 +91,7 @@
     <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
+    <script src="../js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

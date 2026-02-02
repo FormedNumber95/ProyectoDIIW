@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aketza Gonzalez Rey">
     <meta name="description" content="Pagina para contactar con nosotros">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/logo.PNG" type="image/x-icon">
     <title>BB | Contactanos</title>
@@ -17,7 +18,40 @@
         <h1>Blood Bowl</h1>
 
         <!-- NAV -->
-        <nav class="menu" role="navigation" aria-label="Menú principal">
+        <!-- MOVIL/TABLET -->
+        <nav class="navbar d-lg-none menu-movil" role="navigation" aria-label="Menú principal móvil">
+
+            <div class="container-fluid">
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler menu-movil__toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuMovil" aria-controls="menuMovil" aria-expanded="false"
+                    aria-label="Mostrar u ocultar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse menu-movil__panel" id="menuMovil">
+                    <ul class="navbar-nav mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" role="menuitem">Pagina principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./verEquipos.html" role="menuitem">Ver equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./crearEquipo.html" role="menuitem">Crear equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./enlaces.html" role="menuitem">Enlaces a otras paginas</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- ORDENADOR -->
+        <nav class="d-none d-lg-block menu" role="navigation" aria-label="Menú principal">
             <div class="menu--etiqueta">
                 <a href="../index.html" aria-label="Ir a la página principal">
                     <img src="../img/logo.PNG" alt="Despliega Menu" class="menu--logo">
@@ -43,15 +77,11 @@
 
     <!-- MAIN -->
     <main role="main">
-        <section class="contenedor"
-                 role="region"
-                 aria-labelledby="titulo-contacto">
+        <section class="contenedor" role="region" aria-labelledby="titulo-contacto">
 
             <h2 id="titulo-contacto">Contactanos</h2>
 
-            <form action="#"
-                  role="form"
-                  aria-describedby="titulo-contacto">
+            <form action="#" role="form" aria-describedby="titulo-contacto">
 
                 <table role="presentation">
                     <tr>
@@ -59,12 +89,8 @@
                             <label for="nombre">Nombre:</label>
                         </td>
                         <td>
-                            <input type="text"
-                                   name="nombre"
-                                   id="nombre"
-                                   required
-                                   class="ocupaTodo"
-                                   aria-required="true">
+                            <input type="text" name="nombre" id="nombre" required class="ocupaTodo"
+                                aria-required="true">
                         </td>
                     </tr>
 
@@ -73,12 +99,7 @@
                             <label for="email">Email:</label>
                         </td>
                         <td>
-                            <input type="email"
-                                   name="email"
-                                   id="email"
-                                   required
-                                   class="ocupaTodo"
-                                   aria-required="true">
+                            <input type="email" name="email" id="email" required class="ocupaTodo" aria-required="true">
                         </td>
                     </tr>
 
@@ -88,31 +109,21 @@
                             <table role="presentation">
                                 <tr>
                                     <td>
-                                        <input type="radio"
-                                               name="radio"
-                                               id="aniadirRaza"
-                                               value="aniadirRaza"
-                                               checked
-                                               aria-checked="true">
+                                        <input type="radio" name="radio" id="aniadirRaza" value="aniadirRaza" checked
+                                            aria-checked="true">
                                         <label for="aniadirRaza">Añadir nueva raza</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="radio"
-                                               name="radio"
-                                               id="errorDetectado"
-                                               value="errorDetectado">
+                                        <input type="radio" name="radio" id="errorDetectado" value="errorDetectado">
                                         <label for="errorDetectado">Se ha encontrado un
                                             error</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="radio"
-                                               name="radio"
-                                               id="otro"
-                                               value="otro">
+                                        <input type="radio" name="radio" id="otro" value="otro">
                                         <label for="otro">Otro</label>
                                     </td>
                                 </tr>
@@ -125,23 +136,15 @@
                             <p>
                                 <label for="txtArea">Mensaje:</label>
                             </p>
-                            <textarea name="txtArea"
-                                      id="txtArea"
-                                      placeholder="Mensaje"
-                                      required
-                                      class="ocupaTodo"
-                                      aria-required="true"
-                                      aria-label="Mensaje del formulario de contacto"></textarea>
+                            <textarea name="txtArea" id="txtArea" placeholder="Mensaje" required class="ocupaTodo"
+                                aria-required="true" aria-label="Mensaje del formulario de contacto"></textarea>
                         </td>
                     </tr>
 
                     <tr>
                         <td colspan="2">
-                            <input type="submit"
-                                   value="ENVIAR"
-                                   name="enviar"
-                                   class="ocupaTodo"
-                                   aria-label="Enviar formulario de contacto">
+                            <input type="submit" value="ENVIAR" name="enviar" class="ocupaTodo"
+                                aria-label="Enviar formulario de contacto">
                         </td>
                     </tr>
                 </table>
@@ -153,6 +156,7 @@
     <footer role="contentinfo">
         <p>Aketza González Rey - 2025</p>
     </footer>
+    <script src="../js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
