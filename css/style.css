@@ -683,7 +683,7 @@ footer>p {
 /******************************/
 /* Botón hamburguesa blanco */
 .menu-movil__toggler {
-    border-color: white;
+    border-color: var(--secundario);
 }
 
 .menu-movil__toggler .navbar-toggler-icon {
@@ -692,15 +692,15 @@ footer>p {
 
 /* Fondo blanco del menú desplegado */
 .menu-movil__panel {
-    background-color: white;
+    background-color: var(--secundario);
     padding: 0.5rem 1rem;
 }
 
 /* Color de los enlaces (ajústalo si quieres) */
 .menu-movil__panel .nav-link {
-    color: #000;
+    color: var(--principal);
 }
 
 .menu-movil__panel .nav-link:hover {
-    background-color: #f2f2f2;
+    background-color: var(--secundario);
 }
